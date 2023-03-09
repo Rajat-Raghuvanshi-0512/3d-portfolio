@@ -40,7 +40,7 @@ const Navbar = () => {
           <img
             src="/logo.png"
             alt="logo"
-            className="w-10 h-10 object-contain"
+            className="w-12 h-12 object-contain"
           />
           <p className="text-white text-[18px] font-bold cursor-pointer">
             &nbsp;&nbsp;Rajat Raghuvanshi
