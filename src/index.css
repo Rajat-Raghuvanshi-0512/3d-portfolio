@@ -11,6 +11,7 @@
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
+  transition: all 0.3s;
 }
 
 /* width */
@@ -25,12 +26,12 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5e24dd;
+  background: #01c1cf;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #4009b6;
+  background: #019ca7;
 }
 
 .hash-span {
@@ -54,11 +55,11 @@
 }
 
 .violet-gradient {
-  background: #804dee;
+  background: #01c1cf;
   background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
   background: -webkit-linear-gradient(
     -90deg,
-    #804dee 0%,
+    #01c1cf 0%,
     rgba(60, 51, 80, 0) 100%
   );
 }

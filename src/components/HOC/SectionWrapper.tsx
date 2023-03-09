@@ -11,7 +11,7 @@ const SectionWrapper = (Component: React.FunctionComponent, idName: string) =>
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.paddingX} max-w-7xl mx-auto relative z-0`}
+        className={`${styles.paddingX} max-w-7xl mx-auto relative`}
       >
         <span className="hash-span" id={idName}>
           &nbsp;

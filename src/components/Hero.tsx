@@ -36,25 +36,40 @@ const Hero = () => {
   useEffect(() => {
     const tickInterval = setInterval(() => {
       tick();
-    }, 100);
+    }, 150);
     return () => clearInterval(tickInterval);
   }, [text, tick]);
   return (
     <section className={`relative w-full h-[110vh] mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rotate-45 bg-[#915EFF]" />
+          <div className="w-5 h-5 rotate-45 bg-[#01C1CF]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            👋Hi, I'm <span className="text-[#915EFF]">Rajat</span>
+            <span className="block sm:inline">
+              👋Hi, I'm <span className="text-[#01C1CF]">Rajat</span>
+            </span>
+            <a
+              onClick={() => window.open("resume.pdf")}
+              className="ml-3 text-[14px] sm:text-[10px] bg-opacity-90 px-2 py-1 rounded-3xl font-semibold -mt-10 md:mt-8 bg-[#01C1CF] hover:bg-[#02959f] hover:scale-90 cursor-pointer "
+              title="View Resume"
+            >
+              📄Resume
+            </a>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 pl-10 text-white-100`}>
-            🚀I am a <span>{text}❗</span>
+          <p
+            className={`${styles.heroSubText} mt-2 lg:-mt-2 pl-3 sm:pl-10 text-white-100`}
+          >
+            🚀 I am a&nbsp;
+            <span>
+              {text}
+              <span className="text-[#01C1CF] text-3xl font-bold">!</span>
+            </span>
           </p>
         </div>
       </div>

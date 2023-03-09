@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { styles } from "../styles";
 import { Link } from "react-router-dom";
 import { menu, close } from "../assets";
@@ -7,9 +7,26 @@ import { navLinks } from "../constants";
 const Navbar = () => {
   const [active, setActive] = useState<string>("");
   const [toggle, setToggle] = useState<boolean>(false);
+  const navRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const classes = ["backdrop-blur-lg", "bg-opacity-0", "bg-primary"];
+    window.onscroll = () => {
+      if (window.scrollY > 70) {
+        classes.forEach((c) => {
+          navRef?.current?.classList.add(c);
+        });
+      } else {
+        classes.forEach((c) => {
+          navRef?.current?.classList.remove(c);
+        });
+      }
+    };
+  }, []);
+
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 bg-primary bg-opacity-0  backdrop-blur-lg shadow-sm`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 shadow-sm`}
+      ref={navRef}
     >
       <div className="flex justify-between w-full items-center max-w-7xl mx-auto">
         <Link
@@ -26,11 +43,11 @@ const Navbar = () => {
             className="w-10 h-10 object-contain"
           />
           <p className="text-white text-[18px] font-bold cursor-pointer">
-            Rajat Raghuvanshi &nbsp;
-            <span className="sm:block hidden">| Software developer</span>
+            &nbsp;&nbsp;Rajat Raghuvanshi
+            <span className="sm:block hidden">| Software developer |</span>
           </p>
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -43,7 +60,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="lg:hidden flex flex-1 justify-end items-center">
           <img
             src={toggle ? close : menu}
             alt="menu"

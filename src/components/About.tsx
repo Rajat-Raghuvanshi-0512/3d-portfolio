@@ -9,7 +9,7 @@ import { ServiceCardType } from "../utils/types";
 
 const ServiceCard = ({ index, icon, title }: ServiceCardType) => {
   return (
-    <Tilt className="xs:w-[250px] w-full mx-auto" tiltReverse={true}>
+    <Tilt className="xs:w-[230px] w-full mx-auto" tiltReverse={true}>
       <motion.div
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full green-pink-gradient p-1 rounded-[20px] shadow-card"
@@ -34,7 +34,7 @@ const About = () => {
         understanding of modern technologies and best design practices. An
         ambitious problem solver willing to join a team of like-minded people
       </motion.p>
-      <div className="flex mt-20 flex-wrap gap-10">
+      <div className="flex my-20 flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard
             key={service.title}

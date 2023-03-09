@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import Tilt from "react-parallax-tilt";
 import { styles } from "../styles";
 import SectionWrapper from "./HOC/SectionWrapper";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -15,33 +15,35 @@ const FeedbackCard = ({
   company,
   image,
 }: FeedbackCardType) => (
-  <motion.div
-    variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className="bg-black-200 py-10 px-5 rounded-3xl xs:w-[280px] w-full"
-  >
-    <p className="text-white font-black text-[48px]">"</p>
+  <Tilt>
+    <motion.div
+      variants={fadeIn("", "spring", index * 0.5, 0.75)}
+      className="bg-black-200 py-10 px-5 rounded-3xl xs:w-[280px] w-full"
+    >
+      <p className="text-white font-black text-[48px]">"</p>
 
-    <div className="mt-1">
-      <p className="text-white tracking-wider text-[16px]">{testimonial}</p>
+      <div className="mt-1">
+        <p className="text-white tracking-wider text-[16px]">{testimonial}</p>
 
-      <div className="mt-7 flex justify-between items-center gap-1">
-        <div className="flex-1 flex flex-col">
-          <p className="text-white font-medium text-[14px]">
-            <span className="blue-text-gradient">@</span> {name}
-          </p>
-          <p className="mt-1 text-secondary text-[11px]">
-            {designation} of {company}
-          </p>
+        <div className="mt-7 flex justify-between items-center gap-1">
+          <div className="flex-1 flex flex-col">
+            <p className="text-white font-medium text-[14px]">
+              <span className="blue-text-gradient">@</span> {name}
+            </p>
+            <p className="mt-1 text-secondary text-[11px]">
+              {designation} of {company}
+            </p>
+          </div>
+
+          <img
+            src={image}
+            alt={`feedback_by-${name}`}
+            className="w-10 h-10 rounded-full object-cover"
+          />
         </div>
-
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className="w-10 h-10 rounded-full object-cover"
-        />
       </div>
-    </div>
-  </motion.div>
+    </motion.div>
+  </Tilt>
 );
 
 const Feedbacks = () => {
@@ -64,4 +66,4 @@ const Feedbacks = () => {
   );
 };
 
-export default SectionWrapper(Feedbacks, "");
+export default SectionWrapper(Feedbacks, "feedbacks");
