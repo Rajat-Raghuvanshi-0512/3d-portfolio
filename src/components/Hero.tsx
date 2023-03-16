@@ -13,22 +13,29 @@ const toRotate = [
 
 const Hero = () => {
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState<number>(0);
   const [text, setText] = useState("");
+  const [delay, setDelay] = useState(150);
 
   const tick = useCallback(() => {
     let i = count % toRotate.length;
-    let fulllength = toRotate[i];
+    let currentText = toRotate[i];
     let updatedText = isDeleting
-      ? fulllength.substring(0, text.length - 1)
-      : fulllength.substring(0, text.length + 1);
+      ? currentText.substring(0, text.length - 1)
+      : currentText.substring(0, text.length + 1);
 
     setText(updatedText);
 
-    if (!isDeleting && text === fulllength) {
+    if (updatedText === currentText) {
+      setDelay(1000);
+    }
+
+    if (!isDeleting && text === currentText) {
       setIsDeleting(true);
+      setDelay(30);
     } else if (isDeleting && text === "") {
       setIsDeleting(false);
+      setDelay(150);
       setCount((prev) => prev + 1);
     }
   }, [text, count, isDeleting]);
@@ -36,9 +43,9 @@ const Hero = () => {
   useEffect(() => {
     const tickInterval = setInterval(() => {
       tick();
-    }, 150);
+    }, delay);
     return () => clearInterval(tickInterval);
-  }, [text, tick]);
+  }, [text, tick, delay]);
   return (
     <section className={`relative w-full h-[110vh] mx-auto`}>
       <div
@@ -63,12 +70,14 @@ const Hero = () => {
             </a>
           </h1>
           <p
-            className={`${styles.heroSubText} mt-2 lg:-mt-2 pl-3 sm:pl-10 text-white-100`}
+            className={`${styles.heroSubText} mt-2 lg:-mt-2 pl-3 sm:pl-10 text-white-100 font-medium`}
           >
-            🚀 I am a&nbsp;
-            <span>
+            🚀 I am&nbsp;
+            <span className="text-[#01C1CF] font-bold">
               {text}
-              <span className="text-[#01C1CF] text-3xl font-bold">!</span>
+              <span className="text-3xl pl-[2px] animate-pulse font-normal">
+                |
+              </span>
             </span>
           </p>
         </div>
@@ -78,7 +87,7 @@ const Hero = () => {
 
       <div className="absolute xs:bottom-16 bottom-24 w-full flex justify-center items-center z-20">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-slate-200 flex justify-center items-start p-2">
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -88,7 +97,7 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
+              className="w-3 h-3 rounded-full bg-slate-200 mb-1"
             />
           </div>
         </a>
