@@ -9,13 +9,10 @@ const MatrixRain: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-
     const matrix =
       'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}';
     const matrixChars = matrix.split('');
-    const font_size = 16;
+    const font_size = 4;
     const columns = canvas.width / font_size;
     const drops: any = [];
 
@@ -48,7 +45,7 @@ const MatrixRain: React.FC = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="w-100 absolute opacity-50 bg-[#090f29]"
+      className="w-100 absolute opacity-50 bg-[#090f29] w-screen h-screen"
     />
   );
 };

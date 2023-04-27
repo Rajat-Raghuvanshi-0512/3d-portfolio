@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
-import { styles } from "../styles";
-import { Link } from "react-router-dom";
-import { menu, close } from "../assets";
-import { navLinks } from "../constants";
+import React, { useEffect, useRef, useState } from 'react';
+import { styles } from '../styles';
+import { Link } from 'react-router-dom';
+import { menu, close } from '../assets';
+import { navLinks } from '../constants';
 
 const Navbar = () => {
-  const [active, setActive] = useState<string>("");
+  const [active, setActive] = useState<string>('');
   const [toggle, setToggle] = useState<boolean>(false);
   const navRef = useRef<HTMLElement>(null);
   useEffect(() => {
-    const classes = ["backdrop-blur-lg", "bg-opacity-0", "bg-primary"];
+    const classes = ['backdrop-blur-lg', 'bg-opacity-0', 'bg-primary'];
     window.onscroll = () => {
       if (window.scrollY > 70) {
         classes.forEach((c) => {
@@ -25,14 +25,14 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 shadow-sm backdrop-blur-[4px]`}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 shadow-sm backdrop-blur-[4px] overflow-x-hidden`}
     >
       <div className="flex justify-between w-full items-center max-w-7xl mx-auto">
         <Link
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
-            setActive("");
+            setActive('');
             window.scrollTo(0, 0);
           }}
         >
@@ -51,7 +51,7 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-secondary"
+                active === link.title ? 'text-white' : 'text-secondary'
               } font-medium hover:drop-shadow-white cursor-pointer text-lg`}
               onClick={() => setActive(link.title)}
             >
@@ -68,7 +68,7 @@ const Navbar = () => {
           />
           <div
             className={`${
-              toggle ? "flex" : "hidden"
+              toggle ? 'flex' : 'hidden'
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex flex-col gap-4 justify-end items-start">
@@ -76,7 +76,7 @@ const Navbar = () => {
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? "text-white" : "text-secondary"
+                    active === link.title ? 'text-white' : 'text-secondary'
                   } font-medium font-poppins hover:text-white cursor-pointer`}
                   onClick={() => {
                     setActive(link.title);

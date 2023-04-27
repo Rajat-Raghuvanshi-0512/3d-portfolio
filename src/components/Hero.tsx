@@ -50,50 +50,49 @@ const Hero = () => {
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}
       >
+        <div className="flex flex-col justify-center items-center mt-20">
+          <div className="w-5 h-5 rotate-45 bg-[#01C1CF]" />
+          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+        </div>
+
         <div className="grid sm:grid-cols-2 h-[90%] w-full">
+          <div className="mt-20 rounded-2xl p-5 h-fit">
+            <h1 className={`${styles.heroHeadText} text-white`}>
+              <span className="block sm:inline">
+                👋Hi, I'm <span className="text-[#01C1CF]">Rajat</span>
+              </span>
+              <a
+                onClick={() => window.open('resume.pdf')}
+                className="ml-3 text-[14px] sm:text-[10px] bg-opacity-90 px-2 py-1 rounded-3xl font-semibold -mt-10 md:mt-8 bg-[#01C1CF] hover:bg-[#02959f] hover:scale-90 cursor-pointer "
+                title="View Resume"
+              >
+                📄Resume
+              </a>
+            </h1>
+            <p
+              className={`${styles.heroSubText} mt-2 lg:-mt-2 pl-3 sm:pl-10 text-white-100 font-medium`}
+            >
+              🚀 I am&nbsp;
+              <span className="text-[#01C1CF] font-bold">
+                {text}
+                <span className="text-3xl pl-[2px] animate-pulse font-normal">
+                  |
+                </span>
+              </span>
+            </p>
+          </div>
           <div className="relative">
             <img
               src={myImg}
               alt="profile"
-              className="w-full h-full object-contain absolute bottom-0"
+              className="w-full h-full object-contain absolute -right-20 bottom-0"
             />
-          </div>
-          <div className="mt-20 rounded-2xl p-5 h-fit flex">
-            <div className="flex flex-col justify-center items-center mr-5">
-              <div className="w-5 h-5 rotate-45 bg-[#01C1CF]" />
-              <div className="w-1 sm:h-80 h-40 violet-gradient" />
-            </div>
-            <div>
-              <h1 className={`${styles.heroHeadText} text-white`}>
-                <span className="block sm:inline">
-                  👋Hi, I'm <span className="text-[#01C1CF]">Rajat</span>
-                </span>
-                <a
-                  onClick={() => window.open('resume.pdf')}
-                  className="ml-3 text-[14px] sm:text-[10px] bg-opacity-90 px-2 py-1 rounded-3xl font-semibold -mt-10 md:mt-8 bg-[#01C1CF] hover:bg-[#02959f] hover:scale-90 cursor-pointer "
-                  title="View Resume"
-                >
-                  📄Resume
-                </a>
-              </h1>
-              <p
-                className={`${styles.heroSubText} mt-2 lg:-mt-2 pl-3 sm:pl-10 text-white-100 font-medium`}
-              >
-                🚀 I am&nbsp;
-                <span className="text-[#01C1CF] font-bold">
-                  {text}
-                  <span className="text-3xl pl-[2px] animate-pulse font-normal">
-                    |
-                  </span>
-                </span>
-              </p>
-            </div>
           </div>
         </div>
       </div>
-      <div className="absolute xs:bottom-16 bottom-32 w-full flex justify-center items-center z-20">
+      <div className="absolute xs:bottom-16 bottom-24 w-full flex justify-center items-center z-20">
         <a href="#about">
-          <div className=" p-2">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-slate-200 flex justify-center items-start p-2">
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -103,10 +102,8 @@ const Hero = () => {
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
-              className="text-black bg-slate-200 rounded p-2 mb-1"
-            >
-              Swipe Up
-            </motion.div>
+              className="w-3 h-3 rounded-full bg-slate-200 mb-1"
+            />
           </div>
         </a>
       </div>

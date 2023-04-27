@@ -1,10 +1,10 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { styles } from "../styles";
-import { textVariant } from "../utils/motion";
-import { services } from "../constants";
-import SectionWrapper from "./HOC/SectionWrapper";
-import { ServiceCardType } from "../utils/types";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { styles } from '../styles';
+import { textVariant } from '../utils/motion';
+import { services } from '../constants';
+import SectionWrapper from './HOC/SectionWrapper';
+import { ServiceCardType } from '../utils/types';
 
 const ServiceCard = ({ index, icon, title }: ServiceCardType) => {
   return (
@@ -44,4 +44,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, "about");
+export default SectionWrapper(About, 'about');
