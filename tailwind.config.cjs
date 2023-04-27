@@ -21,6 +21,9 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.jpg')",
       },
+      dropShadow: {
+        white: "0 3px 3px #01c1cf",
+      },
     },
   },
   plugins: [],

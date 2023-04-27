@@ -25,8 +25,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 shadow-sm`}
-      ref={navRef}
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 shadow-sm backdrop-blur-[4px]`}
     >
       <div className="flex justify-between w-full items-center max-w-7xl mx-auto">
         <Link
@@ -47,13 +46,13 @@ const Navbar = () => {
             <span className="sm:block hidden">| Software developer |</span>
           </p>
         </Link>
-        <ul className="list-none hidden lg:flex flex-row gap-10">
+        <ul className="list-none hidden lg:flex flex-row gap-10 ">
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } font-medium hover:text-white cursor-pointer`}
+              } font-medium hover:drop-shadow-white cursor-pointer text-lg`}
               onClick={() => setActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>

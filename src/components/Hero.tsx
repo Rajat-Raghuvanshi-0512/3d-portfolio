@@ -1,20 +1,19 @@
-import { motion } from "framer-motion";
-import { useCallback, useEffect, useState } from "react";
-
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { useCallback, useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { styles } from '../styles';
+import { myImg } from '../assets';
 
 const toRotate = [
-  "Web Developer",
-  "UI/UX Designer",
-  "Blockchain Developer",
-  "App Developer",
+  'Web Developer',
+  'UI/UX Designer',
+  'Blockchain Developer',
+  'App Developer',
 ];
 
 const Hero = () => {
   const [isDeleting, setIsDeleting] = useState<boolean>(false);
   const [count, setCount] = useState<number>(0);
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
   const [delay, setDelay] = useState(150);
 
   const tick = useCallback(() => {
@@ -33,7 +32,7 @@ const Hero = () => {
     if (!isDeleting && text === currentText) {
       setIsDeleting(true);
       setDelay(30);
-    } else if (isDeleting && text === "") {
+    } else if (isDeleting && text === '') {
       setIsDeleting(false);
       setDelay(150);
       setCount((prev) => prev + 1);
@@ -51,43 +50,50 @@ const Hero = () => {
       <div
         className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5 z-10`}
       >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rotate-45 bg-[#01C1CF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
-        </div>
-
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            <span className="block sm:inline">
-              👋Hi, I'm <span className="text-[#01C1CF]">Rajat</span>
-            </span>
-            <a
-              onClick={() => window.open("resume.pdf")}
-              className="ml-3 text-[14px] sm:text-[10px] bg-opacity-90 px-2 py-1 rounded-3xl font-semibold -mt-10 md:mt-8 bg-[#01C1CF] hover:bg-[#02959f] hover:scale-90 cursor-pointer "
-              title="View Resume"
-            >
-              📄Resume
-            </a>
-          </h1>
-          <p
-            className={`${styles.heroSubText} mt-2 lg:-mt-2 pl-3 sm:pl-10 text-white-100 font-medium`}
-          >
-            🚀 I am&nbsp;
-            <span className="text-[#01C1CF] font-bold">
-              {text}
-              <span className="text-3xl pl-[2px] animate-pulse font-normal">
-                |
-              </span>
-            </span>
-          </p>
+        <div className="grid sm:grid-cols-2 h-[90%] w-full">
+          <div className="relative">
+            <img
+              src={myImg}
+              alt="profile"
+              className="w-full h-full object-contain absolute bottom-0"
+            />
+          </div>
+          <div className="mt-20 rounded-2xl p-5 h-fit flex">
+            <div className="flex flex-col justify-center items-center mr-5">
+              <div className="w-5 h-5 rotate-45 bg-[#01C1CF]" />
+              <div className="w-1 sm:h-80 h-40 violet-gradient" />
+            </div>
+            <div>
+              <h1 className={`${styles.heroHeadText} text-white`}>
+                <span className="block sm:inline">
+                  👋Hi, I'm <span className="text-[#01C1CF]">Rajat</span>
+                </span>
+                <a
+                  onClick={() => window.open('resume.pdf')}
+                  className="ml-3 text-[14px] sm:text-[10px] bg-opacity-90 px-2 py-1 rounded-3xl font-semibold -mt-10 md:mt-8 bg-[#01C1CF] hover:bg-[#02959f] hover:scale-90 cursor-pointer "
+                  title="View Resume"
+                >
+                  📄Resume
+                </a>
+              </h1>
+              <p
+                className={`${styles.heroSubText} mt-2 lg:-mt-2 pl-3 sm:pl-10 text-white-100 font-medium`}
+              >
+                🚀 I am&nbsp;
+                <span className="text-[#01C1CF] font-bold">
+                  {text}
+                  <span className="text-3xl pl-[2px] animate-pulse font-normal">
+                    |
+                  </span>
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <ComputersCanvas />
-
-      <div className="absolute xs:bottom-16 bottom-24 w-full flex justify-center items-center z-20">
+      <div className="absolute xs:bottom-16 bottom-32 w-full flex justify-center items-center z-20">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-slate-200 flex justify-center items-start p-2">
+          <div className=" p-2">
             <motion.div
               animate={{
                 y: [0, 24, 0],
@@ -95,10 +101,12 @@ const Hero = () => {
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
-                repeatType: "loop",
+                repeatType: 'loop',
               }}
-              className="w-3 h-3 rounded-full bg-slate-200 mb-1"
-            />
+              className="text-black bg-slate-200 rounded p-2 mb-1"
+            >
+              Swipe Up
+            </motion.div>
           </div>
         </a>
       </div>

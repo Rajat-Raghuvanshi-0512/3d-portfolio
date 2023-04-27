@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from 'react';
 import {
   Navbar,
   About,
@@ -9,23 +9,24 @@ import {
   Contact,
   StarsCanvas,
   Hero,
-} from "./components";
-
+} from './components';
+import MatrixRain from './components/MatrixBg';
 const App = () => {
   return (
-    <div className="relative z-0 bg-primary">
-      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+    <div className="relative z-0 bg-primary overflow-y-hidden">
+      <MatrixRain />
+      <div className="">
         <Navbar />
         <Hero />
       </div>
       <About />
       <Experience />
-      <Tech />
+      {/* <Tech /> */}
       <Works />
       <Feedbacks />
       <div className="relative z-0">
         <Contact />
-        <StarsCanvas />
+        {/* <StarsCanvas /> */}
       </div>
     </div>
   );
