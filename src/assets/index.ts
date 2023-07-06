@@ -1,35 +1,36 @@
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
-import github from "./github.png";
-import code from "./code.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
+import backend from './backend.png';
+import creator from './creator.png';
+import mobile from './mobile.png';
+import web from './web.png';
+import github from './github.png';
+import code from './code.png';
+import menu from './menu.svg';
+import close from './close.svg';
 
-import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import css from './tech/css.webp';
+import docker from './tech/docker.webp';
+import figma from './tech/figma.webp';
+import git from './tech/git.webp';
+import html from './tech/html.webp';
+import javascript from './tech/javascript.webp';
+import mongodb from './tech/mongodb.webp';
+import nodejs from './tech/nodejs.webp';
+import reactjs from './tech/reactjs.webp';
+import redux from './tech/redux.webp';
+import tailwind from './tech/tailwind.webp';
+import typescript from './tech/typescript.webp';
+import threejs from './tech/threejs.svg';
 
-import skillvertex from "./company/skillvertex.png";
-import qwings from "./company/qwings.png";
-import duckcart from "./company/duckcart.png";
-import avada from "./company/avada.png";
+import skillvertex from './company/skillvertex.png';
+import qwings from './company/qwings.png';
+import duckcart from './company/duckcart.png';
+import avada from './company/avada.png';
+import pixy from './company/pixy.webp';
 
-import ChatAppVideo from "./videos/chatapp.mp4";
-import ShopBuddyVideo from "./videos/shopbuddy.mp4";
-import KryptVideo from "./videos/krypt.mp4";
-import VoyageVideo from "./videos/voyage.mp4";
+import ChatAppVideo from './videos/chatapp.mp4';
+import ShopBuddyVideo from './videos/shopbuddy.mp4';
+import KryptVideo from './videos/krypt.mp4';
+import VoyageVideo from './videos/voyage.mp4';
 
 export {
   backend,
@@ -56,6 +57,7 @@ export {
   skillvertex,
   qwings,
   duckcart,
+  pixy,
   avada,
   ChatAppVideo,
   KryptVideo,

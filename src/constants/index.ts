@@ -23,153 +23,167 @@ import {
   KryptVideo,
   VoyageVideo,
   avada,
-} from "../assets";
+  pixy,
+} from '../assets';
 
 export const navLinks = [
   {
-    id: "about",
-    title: "About",
+    id: 'about',
+    title: 'About',
   },
   {
-    id: "work",
-    title: "Work",
+    id: 'work',
+    title: 'Work',
   },
   {
-    id: "projects",
-    title: "Projects",
+    id: 'projects',
+    title: 'Projects',
   },
   {
-    id: "feedbacks",
-    title: "Feedbacks",
+    id: 'feedbacks',
+    title: 'Feedbacks',
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: 'contact',
+    title: 'Contact',
   },
 ];
 
 const services = [
   {
-    title: "Frontend Developer",
+    title: 'Frontend Developer',
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: 'React Native Developer',
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: 'Backend Developer',
     icon: backend,
   },
   {
-    title: "Blockchain Creator",
+    title: 'Blockchain Creator',
     icon: creator,
   },
 ];
 
 const technologies = [
   {
-    name: "HTML 5",
+    name: 'HTML 5',
     icon: html,
   },
   {
-    name: "CSS 3",
+    name: 'CSS 3',
     icon: css,
   },
   {
-    name: "JavaScript",
+    name: 'JavaScript',
     icon: javascript,
   },
   {
-    name: "TypeScript",
+    name: 'TypeScript',
     icon: typescript,
   },
   {
-    name: "React JS",
+    name: 'React JS',
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: 'Redux Toolkit',
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
+    name: 'Tailwind CSS',
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: 'Node JS',
     icon: nodejs,
   },
   {
-    name: "MongoDB",
+    name: 'MongoDB',
     icon: mongodb,
   },
   {
-    name: "Three JS",
+    name: 'Three JS',
     icon: threejs,
   },
   {
-    name: "git",
+    name: 'git',
     icon: git,
   },
   {
-    name: "figma",
+    name: 'figma',
     icon: figma,
   },
   {
-    name: "docker",
+    name: 'docker',
     icon: docker,
   },
 ];
 
 const experiences = [
   {
-    title: "NodeJs Developer",
-    company_name: "Duckcart",
-    icon: duckcart,
-    iconBg: "#E6DEDD",
-    date: "November 2022 - Present",
+    title: 'Fullstack Developer',
+    company_name: 'Pixy Square',
+    icon: pixy,
+    iconBg: '#E6DEDD',
+    date: 'May 2023 - Present',
     points: [
-      "Managing the backend of a new Startup application, creating new apis, adding new features etc.",
-      "Managing a team of Interns.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Keeping a track of changes and new features added by other interns",
+      'Fulfilling the demands of clients of new Startup applications',
+      'Developing figma designs into responsive web applications',
+      'Ensuring cross-browser compatibility.',
+      'Using various optimization and SEO enhancing techniques',
+    ],
+  },
+  {
+    title: 'NodeJs Developer',
+    company_name: 'Duckcart',
+    icon: duckcart,
+    iconBg: '#E6DEDD',
+    date: 'November 2022 - May 2023',
+    points: [
+      'Managing the backend of a new Startup application, creating new apis, adding new features etc.',
+      'Managing a team of Interns.',
+      'Implementing responsive design and ensuring cross-browser compatibility.',
+      'Keeping a track of changes and new features added by other interns',
     ],
   },
 
   {
-    title: "Frontend Developer",
-    company_name: "Qwings",
+    title: 'Frontend Developer',
+    company_name: 'Qwings',
     icon: qwings,
-    iconBg: "#E6DEDD",
-    date: "March 2022 - July 2022",
+    iconBg: '#E6DEDD',
+    date: 'March 2022 - July 2022',
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      'Developing and maintaining web applications using React.js and other related technologies.',
+      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
+      'Participating in code reviews and providing constructive feedback to other developers.',
     ],
   },
   {
-    title: "Web Developer",
-    company_name: "Avada",
+    title: 'Web Developer',
+    company_name: 'Avada',
     icon: avada,
-    iconBg: "#E6DEDD",
-    date: "March 2021 - August 2021",
+    iconBg: '#E6DEDD',
+    date: 'March 2021 - August 2021',
     points: [
-      "Worked as a senior web developer, lead a team of 8 people, maintained the main website of the company",
-      "Taught colleagues good code practices and optimization techniques.",
+      'Worked as a senior web developer, lead a team of 8 people, maintained the main website of the company',
+      'Taught colleagues good code practices and optimization techniques.',
     ],
   },
   {
-    title: "MERN Stack Developer",
-    company_name: "Skill Vertex",
+    title: 'MERN Stack Developer',
+    company_name: 'Skill Vertex',
     icon: skillvertex,
-    iconBg: "#32FFD4",
-    date: "October 2020 - December 2020",
+    iconBg: '#32FFD4',
+    date: 'October 2020 - December 2020',
     points: [
-      "Developing and maintaining web applications using MERN stack.",
-      "Implemented previous learning, created and maintained several apps i.e E - commerce and Food delivery.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
+      'Developing and maintaining web applications using MERN stack.',
+      'Implemented previous learning, created and maintained several apps i.e E - commerce and Food delivery.',
+      'Implementing responsive design and ensuring cross-browser compatibility.',
     ],
   },
 ];
@@ -177,102 +191,102 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rajat proved me wrong.",
-    name: "Ankit",
-    designation: "Team Leader",
-    company: "Qwings",
+      'I thought it was impossible to make a website as beautiful as our product, but Rajat proved me wrong.',
+    name: 'Ankit',
+    designation: 'Team Leader',
+    company: 'Qwings',
     image:
-      "https://res.cloudinary.com/rajat0512/image/upload/v1642447946/E-commerce/avatar_gehm7u.jpg",
+      'https://res.cloudinary.com/rajat0512/image/upload/v1642447946/E-commerce/avatar_gehm7u.jpg',
   },
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Rajat does.",
-    name: "Abhijit",
-    designation: "HR",
-    company: "Skill Vertex",
+    name: 'Abhijit',
+    designation: 'HR',
+    company: 'Skill Vertex',
     image:
-      "https://res.cloudinary.com/rajat0512/image/upload/v1642447946/E-commerce/avatar_gehm7u.jpg",
+      'https://res.cloudinary.com/rajat0512/image/upload/v1642447946/E-commerce/avatar_gehm7u.jpg',
   },
   {
     testimonial:
       "After Rajat optimized our website, our traffic increased by 30%. We can't thank you enough!",
-    name: "Anubhav",
-    designation: "Project Manager",
-    company: "Avada",
+    name: 'Anubhav',
+    designation: 'Project Manager',
+    company: 'Avada',
     image:
-      "https://res.cloudinary.com/rajat0512/image/upload/v1642447946/E-commerce/avatar_gehm7u.jpg",
+      'https://res.cloudinary.com/rajat0512/image/upload/v1642447946/E-commerce/avatar_gehm7u.jpg',
   },
 ];
 
 const projects = [
   {
-    name: "Shop Buddy",
+    name: 'Shop Buddy',
     description:
-      "Shop Buddy is an attempt to serve the people of India with unique designs on apparels. E-commerce is revolutionising the way we all shop in India.",
+      'Shop Buddy is an attempt to serve the people of India with unique designs on apparels. E-commerce is revolutionising the way we all shop in India.',
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: 'react',
+        color: 'blue-text-gradient',
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: 'mongodb',
+        color: 'green-text-gradient',
       },
       {
-        name: "nodejs",
-        color: "pink-text-gradient",
+        name: 'nodejs',
+        color: 'pink-text-gradient',
       },
     ],
     image: ShopBuddyVideo,
     source_code_link:
-      "https://github.com/Rajat-Raghuvanshi-0512/MERN-Ecommerce",
-    live_url: "https://shop-buddy.onrender.com",
+      'https://github.com/Rajat-Raghuvanshi-0512/MERN-Ecommerce',
+    live_url: 'https://shop-buddy.onrender.com',
   },
   {
-    name: "Krypt",
+    name: 'Krypt',
     description:
-      "Web 3.0 has the potential to change the internet as we know it, forever. This is my first blockchain cryptocurrency app.",
+      'Web 3.0 has the potential to change the internet as we know it, forever. This is my first blockchain cryptocurrency app.',
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
+        name: 'react',
+        color: 'blue-text-gradient',
       },
       {
-        name: "solidity",
-        color: "green-text-gradient",
+        name: 'solidity',
+        color: 'green-text-gradient',
       },
       {
-        name: "web 3.0",
-        color: "pink-text-gradient",
+        name: 'web 3.0',
+        color: 'pink-text-gradient',
       },
     ],
     image: KryptVideo,
     source_code_link:
-      "https://github.com/Rajat-Raghuvanshi-0512/web3.0-blockchain-app",
-    live_url: "https://krypt-georli.netlify.app/",
+      'https://github.com/Rajat-Raghuvanshi-0512/web3.0-blockchain-app',
+    live_url: 'https://krypt-georli.netlify.app/',
   },
   {
-    name: "Voyage Tours and Travels",
+    name: 'Voyage Tours and Travels',
     description:
       "With Voyage, businesses may save money and offer convenience to their clients. Also, 'community chat' has been added for the user to find a travel companion.",
     tags: [
       {
-        name: "reactjs",
-        color: "blue-text-gradient",
+        name: 'reactjs',
+        color: 'blue-text-gradient',
       },
       {
-        name: "heroku",
-        color: "green-text-gradient",
+        name: 'heroku',
+        color: 'green-text-gradient',
       },
       {
-        name: "nodejs",
-        color: "pink-text-gradient",
+        name: 'nodejs',
+        color: 'pink-text-gradient',
       },
     ],
     image: VoyageVideo,
     source_code_link:
-      "https://github.com/Rajat-Raghuvanshi-0512/voyage-tours-and-travels",
-    live_url: "https://voyage-tours.netlify.app/",
+      'https://github.com/Rajat-Raghuvanshi-0512/voyage-tours-and-travels',
+    live_url: 'https://voyage-tours.netlify.app/',
   },
 ];
 

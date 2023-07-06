@@ -1,11 +1,11 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Tilt from "react-parallax-tilt";
-import { styles } from "../styles";
-import SectionWrapper from "./HOC/SectionWrapper";
-import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
-import { FeedbackCardType } from "../utils/types";
+import React from 'react';
+import { motion } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
+import { styles } from '../styles';
+import SectionWrapper from './HOC/SectionWrapper';
+import { fadeIn, textVariant } from '../utils/motion';
+import { testimonials } from '../constants';
+import { FeedbackCardType } from '../utils/types';
 
 const FeedbackCard = ({
   index,
@@ -17,7 +17,7 @@ const FeedbackCard = ({
 }: FeedbackCardType) => (
   <Tilt>
     <motion.div
-      variants={fadeIn("", "spring", index * 0.5, 0.75)}
+      variants={fadeIn('', 'spring', index * 0.5, 0.75)}
       className="bg-black-200 py-10 px-5 rounded-3xl xs:w-[280px] w-full"
     >
       <p className="text-white font-black text-[48px]">"</p>
@@ -57,7 +57,7 @@ const Feedbacks = () => {
           <h2 className={styles.sectionHeadText}>Testimonials</h2>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-5`}>
+      <div className={`-mt-20 pb-14 ${styles.paddingX} grid grid-cols-3 gap-5`}>
         {testimonials.map((testimonial, index) => (
           <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
@@ -66,4 +66,4 @@ const Feedbacks = () => {
   );
 };
 
-export default SectionWrapper(Feedbacks, "feedbacks");
+export default SectionWrapper(Feedbacks, 'feedbacks');

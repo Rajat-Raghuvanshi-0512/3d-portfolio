@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
-import "react-vertical-timeline-component/style.min.css";
-import { textVariant } from "../utils/motion";
-import { styles } from "../styles";
-import SectionWrapper from "./HOC/SectionWrapper";
-import { experiences } from "../constants";
-import { ExperienceCardType } from "../utils/types";
+} from 'react-vertical-timeline-component';
+import { motion } from 'framer-motion';
+import 'react-vertical-timeline-component/style.min.css';
+import { textVariant } from '../utils/motion';
+import { styles } from '../styles';
+import SectionWrapper from './HOC/SectionWrapper';
+import { experiences } from '../constants';
+import { ExperienceCardType } from '../utils/types';
 
 const ExperienceCard = ({ experience }: ExperienceCardType) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: "#1d1836", color: "white" }}
+      contentStyle={{ background: '#151030', color: 'white' }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
@@ -26,7 +26,7 @@ const ExperienceCard = ({ experience }: ExperienceCardType) => {
           />
         </div>
       }
-      contentArrowStyle={{ borderRight: "7px solid #232631" }}
+      contentArrowStyle={{ borderRight: '7px solid #232631' }}
     >
       <div>
         <h3 className="text-white text-[24px]">{experience.title}</h3>
@@ -66,4 +66,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, 'work');
